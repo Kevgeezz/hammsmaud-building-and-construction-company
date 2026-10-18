@@ -993,11 +993,14 @@ h3 {
 
   #header-nav .site-navigation-panel .offcanvas-header {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
     min-height: 148px;
     padding: 2rem 1.75rem 1.35rem;
     border-bottom: 1px solid rgba(39, 34, 27, 0.1);
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+      url(https://images.unsplash.com/vector-1788230847720-75ba11bdb8a3?q=80&w=1040&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D)
+        center / cover no-repeat;
   }
 
   #header-nav .site-navigation-heading {
@@ -1032,6 +1035,7 @@ h3 {
     transition:
       background-color 180ms ease,
       opacity 180ms ease;
+    background-color: #f8f6f1;
   }
 
   #header-nav .site-navigation-panel .btn-close:hover {
@@ -1092,7 +1096,7 @@ h3 {
     margin-top: auto;
     padding: 1.4rem 1.45rem 1.5rem;
     border-radius: 1rem;
-    background: #27251f;
+    background: #400101;
     color: #fff;
   }
 
