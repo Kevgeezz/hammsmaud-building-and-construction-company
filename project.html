@@ -1,0 +1,1035 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bamboo</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="aos/aos.css" />
+    <link href="css/date-time-picker-component.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+  </head>
+
+  <body
+    class="projects-page"
+    data-bs-spy="scroll"
+    data-bs-target="#header-nav"
+    tabindex="0"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol xmlns="http://www.w3.org/2000/svg" id="mail" viewBox="0 0 24 24">
+        <g fill="currentColor">
+          <path
+            d="M22 7.535V17a3 3 0 0 1-2.824 2.995L19 20H5a3 3 0 0 1-2.995-2.824L2 17V7.535l9.445 6.297l.116.066a1 1 0 0 0 .878 0l.116-.066z"
+          />
+          <path
+            d="M19 4c1.08 0 2.027.57 2.555 1.427L12 11.797l-9.555-6.37a3 3 0 0 1 2.354-1.42L5 4z"
+          />
+        </g>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="call" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="location"
+        viewBox="0 0 32 32"
+      >
+        <path
+          fill="currentColor"
+          d="M16 3.5A7.5 7.5 0 0 0 8.5 11c0 4.143 7.5 18.12 7.5 18.12S23.5 15.144 23.5 11A7.5 7.5 0 0 0 16 3.5m0 11.084a3.583 3.583 0 1 1 0-7.168a3.583 3.583 0 1 1 0 7.168"
+        />
+      </symbol>
+      <symbol id="btn-arrow" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M15.835 11.63L9.205 5.2C8.79 4.799 8 5.042 8 5.57v12.86c0 .528.79.771 1.205.37l6.63-6.43a.5.5 0 0 0 0-.74"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="facebook"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="blogger"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M19.822 9.729H18.73a1.113 1.113 0 0 1-1.093-1.094A5.636 5.636 0 0 0 12 3H8.636A5.636 5.636 0 0 0 3 8.635v6.73A5.636 5.636 0 0 0 8.636 21h6.729A5.636 5.636 0 0 0 21 15.364v-4.458a1.15 1.15 0 0 0-1.178-1.177M8.552 7.542h4.037c.589 0 1.093.504 1.093 1.093S13.178 9.73 12.59 9.73H8.55a1.113 1.113 0 0 1-1.093-1.094c0-.589.505-1.093 1.093-1.093m6.897 8.916H8.636a1.113 1.113 0 0 1-1.094-1.094c0-.589.505-1.093 1.094-1.093h6.813c.588 0 1.093.504 1.093 1.093s-.505 1.094-1.093 1.094"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="instagram"
+        viewBox="0 0 256 256"
+      >
+        <path
+          fill="currentColor"
+          d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="twitter"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="linkedin"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="navbar-icon"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="icon-arrow-left"
+        viewBox="0 0 15 15"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="m2.707 8l3.147 3.146l-.708.707L.793 7.5l4.353-4.354l.708.708L2.707 7H14v1H2.707Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="icon-arrow-right"
+        viewBox="0 0 15 15"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M9.854 3.146L14.207 7.5l-4.353 4.354l-.708-.708L12.293 8H1V7h11.293L9.146 3.854l.708-.708Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+    <div id="bodywrap" class="overflow-hidden">
+      <header id="header" class="position-relative">
+        <nav
+          id="header-nav"
+          class="navbar navbar-expand-lg p-3 py-4 container-fluid border-bottom position-fixed"
+        >
+          <div class="container-fluid site-navigation-inner">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="images/h.png"
+                class="logo"
+                alt="Hammsmaud Building and Construction"
+              />
+            </a>
+            <button
+              class="navbar-toggler d-flex d-lg-none order-3 p-2 shadow-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#bdNavbar"
+              aria-controls="bdNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <svg class="navbar-icon text-black">
+                <use xlink:href="#navbar-icon"></use>
+              </svg>
+            </button>
+            <div
+              class="offcanvas offcanvas-lg offcanvas-end site-navigation-panel"
+              tabindex="-1"
+              id="bdNavbar"
+              aria-labelledby="bdNavbarOffcanvasLabel"
+            >
+              <div class="offcanvas-header site-navigation-heading-wrap">
+                <div class="site-navigation-heading">
+                  <p>HAMMSMAUD</p>
+                  <h2 id="bdNavbarOffcanvasLabel">Explore</h2>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close btn-close-black"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                  data-bs-target="#bdNavbar"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul
+                  id="navbar"
+                  class="navbar-nav site-navigation-links text-titlecase fw-bold justify-content-lg-center justify-content-md-end align-items-center text-center flex-grow-1 text-hover"
+                >
+                  <li class="nav-item me-5">
+                    <a class="nav-link text-titlecase fw-bold" href="index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item me-5">
+                    <a
+                      class="nav-link text-titlecase fw-bold"
+                      href="index.html#projects"
+                      >Gallery</a
+                    >
+                  </li>
+                  <li class="nav-item me-5">
+                    <a
+                      class="nav-link text-titlecase fw-bold active"
+                      href="project.html"
+                      >Projects</a
+                    >
+                  </li>
+                  <li class="nav-item me-5">
+                    <a
+                      class="nav-link text-titlecase fw-bold"
+                      href="services.html"
+                      >Services</a
+                    >
+                  </li>
+
+                  <!--li class="nav-item dropdown me-5">
+                    <a class="nav-link text-titlecase fw-bold dropdown-toggle pe-0" data-bs-toggle="dropdown" href="#"
+                      role="button" aria-expanded="false">Pages<iconify-icon
+                        icon="material-symbols:arrow-drop-down"></iconify-icon></a>
+                    <ul class="dropdown-menu">
+                      <li class="text-decoration-none">
+                        <a href="about.html" class="dropdown-item text-titlecase fw-bold">About
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="blog.html" class="dropdown-item text-titlecase fw-bold">Blog
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="blog-single.html" class="dropdown-item text-titlecase fw-bold">Blog-Single
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="booking.html" class="dropdown-item text-titlecase fw-bold">Booking
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="services.html" class="dropdown-item text-titlecase fw-bold">Services
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="services-single.html" class="dropdown-item text-titlecase fw-bold">Service-Single
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="project.html" class="dropdown-item text-titlecase fw-bold">Project
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="project-single.html" class="dropdown-item text-titlecase fw-bold">Project-Single
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="pricing.html" class="dropdown-item text-titlecase fw-bold">Pricing
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="contact.html" class="dropdown-item text-titlecase fw-bold">Contact
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="team.html" class="dropdown-item text-titlecase fw-bold">Our Team
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="review.html" class="dropdown-item text-titlecase fw-bold">Reviews
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                      <li>
+                        <a href="faq.html" class="dropdown-item text-titlecase fw-bold">FAQs
+                          <span class="badge bg-primary text-black">Pro</span></a>
+                      </li>
+                    </ul>
+                  </li-->
+
+                  <!--li class="nav-item me-5">
+                    <a class="nav-link text-titlecase fw-bold"
+                      href="https://templatesjungle.gumroad.com/l/bamboo-construction-company-bootstrap-website-template"
+                      target="_blank">Get Pro</a>
+                  </!--li-->
+                </ul>
+                <div class="site-navigation-note">
+                  <span>BUILD WITH CONFIDENCE</span>
+                  <p>Have a project in mind?</p>
+                  <a href="https://wa.me/233544043688"
+                    >Talk to our team
+                    <img
+                      class="inline-arrow-icon"
+                      src="images/right-up-arrow.png"
+                      alt=""
+                      aria-hidden="true"
+                  /></a>
+                </div>
+
+                <!--div class="social-links d-flex mt-5 mt-lg-0 align-items-center justify-content-end">
+                  <ul class="navbar-nav list-unstyled align-items-center justify-content-end">
+                    <li class="pe-4">
+                      <a href="#">
+                        <svg class="facebook" width="18" height="18">
+                          <use xlink:href="#facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="pe-4">
+                      <a href="#" class="light">
+                        <svg class="instagram" width="18" height="18">
+                          <use xlink:href="#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="pe-4">
+                      <a href="#" class="light">
+                        <svg class="linkedin" width="18" height="18">
+                          <use xlink:href="#linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="pe-4">
+                      <a href="#" class="light">
+                        <svg class="twitter" width="18" height="18">
+                          <use xlink:href="#twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="pe-4">
+                      <a href="#" class="light">
+                        <svg class="blogger" width="18" height="18">
+                          <use xlink:href="#blogger"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </!--div-->
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section
+        id="intro"
+        class="jarallax project-page-hero"
+        style="
+          background:
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+            url(images/con2.jpg) center / cover no-repeat;
+          width: 100%;
+          height: 567px;
+          background-repeat: no-repeat;
+          background-position: center;
+        "
+      >
+        <div class="container-sm pt-5">
+          <div class="row py-5">
+            <div class="banner-content my-5 py-5">
+              <h1
+                class="banner-title light text-titlecase fw-bold"
+                data-aos="fade-right"
+              >
+                Projects
+              </h1>
+              <nav class="breadcrumb mt-3">
+                <a
+                  class="breadcrumb-item text-white"
+                  href="index.html"
+                  data-aos="fade-up"
+                  >Home</a
+                >
+                <span
+                  class="breadcrumb-item active text-white"
+                  aria-current="page"
+                  data-aos="fade-up"
+                  >/ About Us</span
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="padding-large">
+        <div class="container">
+          <div class="section-header offset-lg-4">
+            <h2 class="text-uppercase mb-3 left-pattern">Our Projects</h2>
+            <div class="service-floating"></div>
+            <div class="service-floating"></div>
+            <h3 class="text-titlecase">Explore our works</h3>
+          </div>
+          <div class="projects-isotope">
+            <div
+              class="projects-flters d-flex flex-wrap justify-content-center my-5 project-pills"
+            >
+              <button
+                class="filter-button active border-0 bg-transparent me-5 mb-3 project-pill project-pill-reveal"
+                data-filter="*"
+                data-pill-delay="0"
+              >
+                All
+              </button>
+
+              <button
+                class="filter-button border-0 bg-transparent me-5 mb-3 project-pill project-pill-reveal"
+                data-filter=".buildingconstruction"
+                data-pill-delay="80"
+              >
+                Building Construction
+              </button>
+
+              <button
+                class="filter-button border-0 bg-transparent me-5 mb-3 project-pill project-pill-reveal"
+                data-filter=".architecturaldrawing"
+                data-pill-delay="160"
+              >
+                Architectural Drawing
+              </button>
+
+              <button
+                class="filter-button border-0 bg-transparent me-5 mb-3 project-pill project-pill-reveal"
+                data-filter=".landscaping"
+                data-pill-delay="240"
+              >
+                Landscaping
+              </button>
+
+              <button
+                class="filter-button border-0 bg-transparent me-5 mb-3 project-pill project-pill-reveal"
+                data-filter=".landsurvey"
+                data-pill-delay="320"
+              >
+                Land Survey
+              </button>
+              <button
+                class="filter-button border-0 bg-transparent me-5 mb-3 project-pill project-pill-reveal"
+                data-filter=".footballpitchconstruction"
+                data-pill-delay="400"
+              >
+                Football Pitch Construction
+              </button>
+
+              <button
+                class="filter-button border-0 bg-transparent me-5 mb-3 project-pill project-pill-reveal"
+                data-filter=".buildingrenovation"
+                data-pill-delay="480"
+              >
+                Building Renovation
+              </button>
+            </div>
+
+            <div class="row isotope-container">
+              <div class="col-lg-4 col-md-6 item buildingconstruction">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/BD1.jpg"
+                    aria-label="View full-size Wall Plastering project image"
+                  >
+                    <img
+                      src="images/BD1.jpg"
+                      class="reveal-curve-top"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Wall Plastering</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item buildingconstruction">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/BD2.jpg"
+                    aria-label="View full-size Slova private residence project image"
+                  >
+                    <img
+                      src="images/BD2.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Slova private residence</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item buildingconstruction">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/BD3.jpg"
+                    aria-label="View full-size Slova private residence project image"
+                  >
+                    <img
+                      src="images/BD3.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Slova private residence</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item buildingconstruction">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/BD4.jpg"
+                    aria-label="View full-size Slova private residence project image"
+                  >
+                    <img
+                      src="images/BD4.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Slova private residence</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item buildingconstruction">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/BD5.jpg"
+                    aria-label="View full-size Slova private residence project image"
+                  >
+                    <img
+                      src="images/BD5.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Slova private residence</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item architecturaldrawing">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/A1.jpg"
+                    aria-label="View full-size Architectural Drawing 1"
+                  >
+                    <img src="images/A1.jpg" class="img-fluid" alt="building" />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Architectural Drawing 1</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item architecturaldrawing">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/A2.jpg"
+                    aria-label="View full-size Architectural Drawing 2"
+                  >
+                    <img src="images/A2.jpg" class="img-fluid" alt="building" />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Architectural Drawing 2</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item architecturaldrawing">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/A3.jpg"
+                    aria-label="View full-size Architectural Drawing 3"
+                  >
+                    <img src="images/A3.jpg" class="img-fluid" alt="building" />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Architectural Drawing 3</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item architecturaldrawing">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/A4.jpg"
+                    aria-label="View full-size Architectural Drawing 4"
+                  >
+                    <img src="images/A4.jpg" class="img-fluid" alt="building" />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Architectural Drawing 4</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item architecturaldrawing">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/A5.jpg"
+                    aria-label="View full-size Architectural Drawing 5"
+                  >
+                    <img src="images/A5.jpg" class="img-fluid" alt="building" />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Architectural Drawing 5</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item architecturaldrawing">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/A6.jpg"
+                    aria-label="View full-size Architectural Drawing 6"
+                  >
+                    <img src="images/A6.jpg" class="img-fluid" alt="building" />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Architectural Drawing 6</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item landscaping">
+                <div class="projects-content mx-auto">
+                  <a
+                    href="images/projects-item3.jpg"
+                    aria-label="View full-size landscaping project image"
+                  >
+                    <img
+                      src="images/projects-item3.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Jaguare garment industry</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item buildingrenovation">
+                <div class="projects-content">
+                  <a
+                    href="images/projects-item4.jpg"
+                    aria-label="View full-size building renovation project image"
+                  >
+                    <img
+                      src="images/projects-item4.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Jaguare garment industry</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item road">
+                <div class="projects-content">
+                  <a
+                    href="images/projects-item5.jpg"
+                    aria-label="View full-size project image"
+                  >
+                    <img
+                      src="images/projects-item5.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Jaguare garment industry</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item building">
+                <div class="projects-content">
+                  <a
+                    href="images/projects-item6.jpg"
+                    aria-label="View full-size project image"
+                  >
+                    <img
+                      src="images/projects-item6.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Jaguare garment industry</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item road">
+                <div class="projects-content">
+                  <a
+                    href="images/projects-item7.jpg"
+                    aria-label="View full-size project image"
+                  >
+                    <img
+                      src="images/projects-item7.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Jaguare garment industry</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item interior">
+                <div class="projects-content">
+                  <a
+                    href="images/projects-item8.jpg"
+                    aria-label="View full-size project image"
+                  >
+                    <img
+                      src="images/projects-item8.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Jaguare garment industry</a>
+                </h4>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item interior">
+                <div class="projects-content">
+                  <a
+                    href="images/projects-item9.jpg"
+                    aria-label="View full-size project image"
+                  >
+                    <img
+                      src="images/projects-item9.jpg"
+                      class="img-fluid"
+                      alt="building"
+                    />
+                  </a>
+                </div>
+                <h4 class="fs-5 fw-bold text-titlecase text-center mt-3 mb-5">
+                  <a href="project-single.html">Jaguare garment industry</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-floating"></div>
+        <div class="service-floating"></div>
+        <div class="service-floating"></div>
+      </section>
+
+      <section
+        id="contact"
+        class="jarallax d-flex align-items-center padding-large"
+        style="
+          background-image: url(images/construction-project.jpg);
+          width: 100%;
+          height: 567px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        "
+      >
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <h3 class="display-2 text-center text-white text-titlecase">
+                Are You Ready To Start Your Next Project?
+              </h3>
+              <div class="btn d-flex justify-content-center">
+                <a
+                  href="#"
+                  class="btn-slide btn-medium btn-light hover-slide-right mt-5"
+                >
+                  <span class="text-titlecase"
+                    >Get in touch
+                    <svg class="btn-arrow text-dark" width="18" height="18">
+                      <use xlink:href="#btn-arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-construction-icons" aria-hidden="true">
+          <span>
+            <svg viewBox="0 0 48 48">
+              <path d="M8 29v-5a16 16 0 0 1 32 0v5M4 29h40v5H4z" />
+              <path d="M14 22v7m20-7v7M24 8v5" />
+            </svg>
+          </span>
+          <span>
+            <svg viewBox="0 0 48 48">
+              <path d="M6 13h36v24H6zM6 21h36M6 29h36M18 13v8m12 0v8M18 29v8" />
+            </svg>
+          </span>
+          <span>
+            <svg viewBox="0 0 48 48">
+              <path
+                d="M8 40h32M13 40V10h6v30M16 10h27M19 14l20 10M39 14v12m0 0a5 5 0 0 1-10 0v-2"
+              />
+              <path d="M10 16h9m-6 7h6m-6 7h6" />
+            </svg>
+          </span>
+          <span>
+            <svg viewBox="0 0 48 48">
+              <path
+                d="M7 41V8h34v33M7 41h34M14 15h7v8h-7zm13 0h7v8h-7zm-13 14h7v8h-7zm13 0h7v12h-7z"
+              />
+            </svg>
+          </span>
+          <span>
+            <svg viewBox="0 0 48 48">
+              <path
+                d="M9 39 36 12l5 5-27 27H9zM31 17l5 5M26 22l5 5M21 27l5 5M16 32l5 5"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-6">
+              <div class="footer-menu">
+                <img
+                  src="images/h.png"
+                  alt="Hammsmaud Building and Construction"
+                />
+                <h2>Survey the land. Shape the plan. Build it to last.</h2>
+                <p>
+                  Land surveying, architectural drawings, construction,
+                  renovation and landscaping across Ghana.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-menu">
+                <h3>Explore the work</h3>
+                <ul class="menu-list list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="services.html">Our services</a></li>
+                  <li><a href="project.html">Projects</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-menu">
+                <h3>Have a site in mind?</h3>
+                <a class="footer-contact-cta" href="https://wa.me/233544043688">
+                  Let's talk about your project
+                  <img
+                    class="inline-arrow-icon"
+                    src="images/right-up-arrow.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+                <ul class="menu-list list-unstyled">
+                  <li>Building across Ghana</li>
+                  <li>
+                    <a href="https://wa.me/233544043688">+233 54 404 3688</a>
+                  </li>
+                  <li>
+                    <a href="mailto:kevin13asante@gmail.com"
+                      >kevin13asante@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <dialog
+      class="project-lightbox"
+      id="project-lightbox"
+      aria-label="Project image viewer"
+    >
+      <div class="project-lightbox__content">
+        <button
+          class="project-lightbox__close"
+          type="button"
+          aria-label="Close image viewer"
+        >
+          &times;
+        </button>
+        <button
+          class="project-lightbox__nav project-lightbox__previous"
+          type="button"
+          aria-label="Previous image"
+        >
+          &#8592;
+        </button>
+        <figure class="project-lightbox__figure">
+          <img class="project-lightbox__image" alt="" />
+          <figcaption class="project-lightbox__caption">
+            <span class="project-lightbox__title"></span>
+            <span class="project-lightbox__count" aria-live="polite"></span>
+          </figcaption>
+        </figure>
+        <button
+          class="project-lightbox__nav project-lightbox__next"
+          type="button"
+          aria-label="Next image"
+        >
+          &#8594;
+        </button>
+      </div>
+    </dialog>
+    <div
+      class="footer-bottom d-flex flex-wrap justify-content-between border-top pt-5 pb-3"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>
+              <span
+                >©2026 Hammsmaud Building and Construction. All rights
+                reserved.</span
+              >
+              <span
+                >Created by
+                <strong style="color: #f3cc65">asKev Creations</strong></span
+              >
+              <span class="site-live-pill">
+                <span class="site-live-pill__dot" aria-hidden="true"></span>
+                Online
+              </span>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <ul
+              class="social-links list-unstyled d-flex justify-content-lg-end"
+            >
+              <li class="pe-3">
+                <a href="#">
+                  <svg
+                    class="facebook text-primary-500"
+                    width="15"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pe-3">
+                <a href="#">
+                  <svg
+                    class="twitter text-primary-500"
+                    width="15"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pe-3">
+                <a href="#">
+                  <svg
+                    class="instagram text-primary-500"
+                    width="15"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pe-3">
+                <a href="#">
+                  <svg
+                    class="linkedin text-primary-500"
+                    width="15"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    class="youtube text-primary-500"
+                    width="15"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#blogger"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="aos/aos.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+</html>
