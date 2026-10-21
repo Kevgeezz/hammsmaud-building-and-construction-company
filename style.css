@@ -15,6 +15,36 @@
   --bs-primary-rgb: 255, 158, 13;
 }
 
+img[data-media-state="loading"] {
+  background-color: #e9e5df;
+  background-image: linear-gradient(
+    100deg,
+    #e9e5df 20%,
+    #f7f5f0 40%,
+    #e9e5df 60%
+  );
+  background-size: 200% 100%;
+  animation: media-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+img[data-media-state="error"] {
+  background-color: #e9e5df;
+  background-image: none;
+  animation: none;
+}
+
+@keyframes media-skeleton-shimmer {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  img[data-media-state="loading"] {
+    animation: none;
+  }
+}
+
 .inline-arrow-icon {
   display: inline-block;
   width: 4rem;
