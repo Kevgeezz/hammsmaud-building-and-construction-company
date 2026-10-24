@@ -2134,14 +2134,20 @@ button.filter-button.active {
 
 .team-hero__watermark {
   position: absolute;
-  right: -0.05em;
-  bottom: -0.46em;
+  right: 0;
+  bottom: clamp(0.75rem, 2vw, 1.5rem);
+  left: 0;
+  width: 100%;
+  padding-inline: 0.75rem;
+  box-sizing: border-box;
   color: rgba(161, 0, 0, 0.035);
   font-family: var(--heading-font);
-  font-size: clamp(7rem, 17vw, 17rem);
+  font-size: clamp(2rem, 15vw, 16rem) !important;
   font-weight: 800;
   letter-spacing: -0.08em;
-  line-height: 1;
+  line-height: 0.9;
+  text-align: center;
+  white-space: nowrap;
   pointer-events: none;
 }
 
@@ -2186,7 +2192,9 @@ button.filter-button.active {
   min-width: 0;
   border: 1px solid var(--team-line);
   background: #fff;
-  transition: transform 260ms ease, box-shadow 260ms ease;
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease;
 }
 
 .team-craft-card:hover {
@@ -2376,7 +2384,9 @@ button.filter-button.active {
   color: #fff;
   font-size: 0.84rem;
   font-weight: 700;
-  transition: background 180ms ease, transform 180ms ease;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 .team-button:hover,
@@ -2710,7 +2720,9 @@ button.filter-button.active {
   object-fit: cover;
   object-position: center 38%;
   filter: saturate(0.82);
-  transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 300ms ease;
+  transition:
+    transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 300ms ease;
 }
 
 .team-profile-card:hover .team-profile-card__portrait > img {
@@ -2748,7 +2760,9 @@ button.filter-button.active {
   opacity: 0;
   text-transform: uppercase;
   transform: translateY(8px);
-  transition: opacity 220ms ease, transform 220ms ease;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
 }
 
 .team-profile-card:hover .team-profile-card__hover {
