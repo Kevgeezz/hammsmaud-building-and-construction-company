@@ -2634,10 +2634,10 @@ button.filter-button.active {
 .team-gallery-intro {
   padding: 142px 0 24px;
   background: var(--team-paper);
+  background: url(images/team.jpg) center / cover no-repeat;
 }
 
 .team-gallery-intro__top {
-  display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 3rem;
